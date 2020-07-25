@@ -383,6 +383,7 @@ nav{
         text-align: center;
         border-bottom: 1px solid #333;
         border-top: 1px solid #333;
+        color: #000;
     }
     .burger{
         display: unset;
