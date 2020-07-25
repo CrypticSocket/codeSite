@@ -4,23 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css">
+    <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <section class="container">
-        <div class="row">
-            <input type="text" placeholder="Name" class="column">
-            <input type="email" placeholder="email" class="column column-50">
-        </grid>
-        <div class="row">
-            <select name="course" id="course" class="column-100">
-                <option value="null" disabled selected>Select an option</option>
-                <option value="Python">Python</option>
-            </select>
-            <textarea name="expectation" id="expect" cols="30" rows="10" placeholder="What are your expectations?" class="column-100"></textarea>
-        </div>
+    <header>
+        <nav>
+            <div class="logoside">
+                <a href="./index.html"><p>CodeSite</p></a>
+            </div>
+            <ul class="linksside">
+                <a href="./contact.html"><li>Contact Us</li></a>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="form eighty">
+        <p class="formIntro">Feel free to get in touch with us. We will get back to you at the earliest</p>
+        <form action="">
+            <div class="row">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="email" required>    
+                <select name="course" id="course" required>
+                    <option value="null" disabled selected>Select an option</option>
+                    <option value="Python">Python</option>
+                    <option value="Cpp">C++</option>
+                    <option value="C">C</option>
+                    <option value="Java">Java</option>
+                    <option value="ml">ML</option>
+                    <option value="webdev">Web Development</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <textarea name="expectation" id="expect" cols="30" rows="10" placeholder="What are your expectations?" class="expectation" required></textarea>
+            <input type="submit" value="Submit" class="btn coursebtn">
+        </form>
     </section>
 </body>
 </html>

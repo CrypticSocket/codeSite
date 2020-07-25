@@ -18,6 +18,8 @@
     --colorBGDarkerHover : #107bb4;
 
     --colorAltBG : #c43c51;
+    --colorAltBGdull : #c4868f;
+
 
     --color : #000004;
 
@@ -210,9 +212,137 @@ nav{
         font-weight: 100;
     }
 
+    /* Contact */
+
+    .form{
+        min-height: 100vh;
+        padding-top: 10em;
+    }
+
+    .formIntro{
+        font-family: var(--fontSmallText);
+        font-size: 1.5em;
+        line-height: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    .row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .row input, .row select{
+        padding: 0.5em;
+        font-size: 1.2em;
+        width: 30%;
+        font-family: var(--fontSmallText);
+        border: none;
+        border-bottom: 1px solid var(--colorAltBGdull);
+    }
+
+    .row select{
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+    }
+
+    .row input:hover, .row select:hover, .expectation:hover{
+        border: 1px solid var(--colorAltBGdull);
+    }
+
+    .row input:focus, .row select:focus, .row input:active, .row select:active, .expectation:focus, .expectation:active{
+        border: 1px solid var(--colorAltBG);
+        box-shadow: none;
+        outline: none;
+    }
+
+    .expectation{
+        width: 100%;
+        margin: 1em 0;
+        padding: 0.5em;
+        font-size: 1.2em;
+        font-family: var(--fontSmallText);
+        border: none;
+        border-bottom: 1px solid var(--colorAltBGdull);
+    }
+    
+    option:focus, option:active, option:hover{
+        background-color: var(--colorAltBG);
+    }
+
+    /* Testimonials */
+
+    .testiCard{
+        font-family: var(--fontSmallText);
+        padding: 1em;
+        font-size: 1.5em;
+        width: 300px;
+        height: auto;
+        /* box-shadow: rgba(31, 31, 31, 0.12) 0px 1px 6px, rgba(31, 31, 31, 0.12) 0px 1px 4px; */
+        box-shadow: var(--colorAltBG) -2px 1px 6px, var(--colorBGDarker) 2px 1px 4px;
+        line-height: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0.8em auto;
+        transition-duration: 0.5s;
+    }
+
+    .testiCard:hover{
+        box-shadow: var(--colorAltBG) 2px 1px 6px, var(--colorBGDarker) -2px 1px 4px;
+    }
+
+    .startquote{
+        font-size: 2em;
+    }
+
+    #testimonials{
+        margin-top: 2em;
+    }
+
+    .heading{
+        font-family: var(--fontLargerText);
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+    }
+
+    .review{
+        font-family: var(--fontSmallText);
+        font-size: 0.8em;
+        line-height: 1.5em;
+    }
+
+    .reviewer{
+        font-family: var(--fontSmallText);
+        font-size: 0.6em;
+        text-align: right;
+        opacity: 0.8;
+    }
+
     .eighty{
         width: 80%;
         margin: auto;
+    }
+
+    .contactbtn{
+        display: block;
+        margin: auto;
+        margin-top: 1em;
+        background-color: var(--colorAltBG);
+        color: var(--colorDarker);
+        cursor: pointer;
+    }
+
+    .contactbtn:hover{
+        border: 2px solid var(--colorAltBG);
+        background-color: white;
+        color: var(--colorAltBG);
+    }
+
+    .center{
+        text-align: center;
     }
 @media screen and (max-width:768px)
 {
