@@ -48,6 +48,7 @@ body::-webkit-scrollbar-thumb {
 
 html{
     scroll-behavior: smooth;
+    letter-spacing: 0.5px;
 }
 
 /* Navigation */
@@ -107,7 +108,9 @@ nav{
 
     .intro{
         min-height: 100vh;
-        padding-top: 12em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .introText{
@@ -140,6 +143,7 @@ nav{
         border: none;
         align-items: center;
         justify-self: center;
+        border: 2px solid #00000000;
     }
 
     .coursebtn{
@@ -149,12 +153,14 @@ nav{
         background-color: var(--colorAltBG);
         color: var(--colorDarker);
         cursor: pointer;
+
     }
 
     .coursebtn:hover{
         border: 2px solid var(--colorAltBG);
         background-color: white;
         color: var(--colorAltBG);
+        box-sizing: border-box;
     }
 
     /* Courses */
@@ -382,6 +388,10 @@ nav{
     .linear{
         grid-template-columns: 100%;
         grid-gap: 2em;
+    }
+
+    .introText, .introSubText, .smallFont, .review{
+        line-height: 1.15em;
     }
 
     .eighty{
