@@ -192,6 +192,7 @@ nav{
         width: 100%;
         animation: magic 4s infinite;
         margin: 0 1em;
+        overflow-y: scroll;
     }
 
     .specialOffer .courseName{
@@ -413,6 +414,20 @@ nav{
 
     .introText, .introSubText, .smallFont, .review{
         line-height: 1.15em;
+    }
+
+    .specialOffer{
+        margin: 0;
+    }
+
+    .card{
+        font-size: 1.2em;
+        height: auto;
+        width: 100%;
+    }
+
+    .courseName{
+        min-height: auto;
     }
 
     .eighty{
