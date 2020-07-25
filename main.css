@@ -176,7 +176,7 @@ nav{
         font-family: var(--fontSmallText);
         padding: 1em;
         font-size: 1.5em;
-        text-align: center;
+        text-align: left;
         width: 250px;
         height: 250px;
         box-shadow: rgba(31, 31, 31, 0.12) 0px 1px 6px, rgba(31, 31, 31, 0.12) 0px 1px 4px;
@@ -318,6 +318,8 @@ nav{
         font-family: var(--fontSmallText);
         font-size: 0.8em;
         line-height: 1.5em;
+        text-align: justify;
+        word-spacing: -2px;
     }
 
     .reviewer{

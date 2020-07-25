@@ -87,7 +87,7 @@ courses.forEach(item =>
 {
     string += `
     <a class="card" href="${item.link}">
-        <p class="courseName">${item.name}</p>
+        <h3 class="courseName">${item.name}</h3>
         <p class="hours">${item.hours} hours</p>
         <div class="linearInfo">
             <p>${item.difficulty}</p>
