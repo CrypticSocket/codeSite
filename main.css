@@ -144,6 +144,7 @@ nav{
         align-items: center;
         justify-self: center;
         border: 2px solid #00000000;
+        transition-duration: 0.5s;
     }
 
     .coursebtn{
