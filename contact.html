@@ -27,8 +27,8 @@
         <form action="">
             <div class="row">
                 <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="email" required>    
-                <select name="course" id="course" required>
+                <input type="email" placeholder="email" required id="email">    
+                <!-- <select name="course" id="course" required>
                     <option value="null" disabled selected>Select an option</option>
                     <option value="Python">Python</option>
                     <option value="Cpp">C++</option>
@@ -38,11 +38,39 @@
                     <option value="webdev">Web Development</option>
                     <option value="feedback">Feedback</option>
                     <option value="Other">Other</option>
-                </select>
+                </select> -->
+                <input type="text" list="cars" id="courseVal" required/>
+                <datalist id="cars">
+                    <option value="null" disabled selected>Select an option</option>
+                    <option value="Python">Python</option>
+                    <option value="Cpp">C++</option>
+                    <option value="C">C</option>
+                    <option value="Java">Java</option>
+                    <option value="ml">ML</option>
+                    <option value="webdev">Web Development</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="Other">Other</option>
+                </datalist>
             </div>
             <textarea name="expectation" id="expect" cols="30" rows="10" placeholder="What are your expectations?" class="expectation" required></textarea>
             <input type="submit" value="Submit" class="btn coursebtn">
         </form>
     </section>
+    <script>
+        window.onload = function () {
+            var url = document.location.href,
+                params = url.split('?')[1].split('&'),
+                data = {}, tmp;
+            for (var i = 0, l = params.length; i < l; i++) {
+                tmp = params[i].split('=');
+                data[tmp[0]] = tmp[1];
+            }
+            // document.getElementById('here').innerHTML = data.name;
+            courseInput = document.getElementById('courseVal')
+            courseInput.value=data.name.replaceAll('%20', ' ')
+            courseInput.setAttribute('disabled', true)
+
+        }
+    </script>
 </body>
 </html>

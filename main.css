@@ -188,6 +188,23 @@ nav{
         margin: 0.8em auto;
     }
 
+    .specialOffer{
+        width: 100%;
+        animation: magic 4s infinite;
+        margin: 0 1em;
+    }
+
+    .specialOffer .courseName{
+        min-height: auto;
+    }
+
+    .info{
+        font-size: 0.9em;
+        opacity: 0.9;
+        text-align: justify;
+        word-spacing: -2px;
+    }
+
     .card:hover{
         box-shadow: rgba(31, 31, 31, 0.12) 0px 1px 6px, rgba(31, 31, 31, 0.24) 0px 1px 8px;
     }
@@ -413,4 +430,14 @@ nav{
 
 .burger-active{
     transform: rotate(90deg);
+}
+
+@keyframes magic{
+    0% {box-shadow: var(--colorAltBG) -2px 1px 6px, var(--colorBGDarker) 2px 1px 4px;}
+    25% {box-shadow: var(--colorAltBG) 0px 2px 6px, var(--colorBGDarker) 0px -2px 4px;}
+    50% {box-shadow: var(--colorAltBG) 2px 1px 6px, var(--colorBGDarker) -2px 1px 4px;}
+    75% {box-shadow: var(--colorAltBG) 0px -2px 6px, var(--colorBGDarker) 0px 2px 4px;}
+    100% {box-shadow: var(--colorAltBG) -2px 1px 6px, var(--colorBGDarker) 2px 1px 4px;}
+
+
 }

@@ -1,6 +1,7 @@
 const burger = document.querySelector('.burger')
 const nav = document.querySelector('.linksside')
 const stats = document.getElementById('statsHolder')
+const course = document.querySelectorAll('.card')
 
 burger.addEventListener('click', function(){
     nav.classList.toggle('nav-active')
@@ -12,7 +13,7 @@ let courses = [{
     "difficulty": "Beginner",
     "hours": "21.5",
     "price": "Paid",
-    "link" : "https://www.udemy.com/course/complete-python-bootcamp/"
+    "link" : "#"
 },
 
 
@@ -21,7 +22,7 @@ let courses = [{
     "difficulty": "Beginner",
     "hours": "28.5",
     "price": "Paid",
-    "link" : "https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/"
+    "link" : "#"
 },
 
 {
@@ -29,7 +30,7 @@ let courses = [{
     "difficulty": "Intermediate",
     "hours": "44",
     "price": "Paid",
-    "link" : "https://www.udemy.com/course/machinelearning/"
+    "link" : "#"
 },
 
 {
@@ -37,7 +38,7 @@ let courses = [{
     "difficulty": "Intermediate",
     "hours": "10.5",
     "price": "Paid",
-    "link" : "https://www.udemy.com/course/unsupervised-deep-learning-in-python/"
+    "link" : "#"
 },
 
 {
@@ -45,7 +46,7 @@ let courses = [{
     "difficulty": "Beginner",
     "hours": "37.5",
     "price": "Paid",
-    "link" : "https://www.udemy.com/course/php-for-complete-beginners-includes-msql-object-oriented/"
+    "link" : "#"
 },
 
 {
@@ -53,7 +54,7 @@ let courses = [{
     "difficulty": "Beginner",
     "hours": "2",
     "price": "Paid",
-    "link" : "https://www.udemy.com/course/be-creative-designdevelop-a-website-from-scratch/"
+    "link" : "#"
 },
 
 {
@@ -61,7 +62,7 @@ let courses = [{
     "difficulty": "Beginner",
     "hours": "10",
     "price": "",
-    "link" : "https://juniorpandit.com/"
+    "link" : "#"
 },
 
 {
@@ -69,7 +70,7 @@ let courses = [{
     "difficulty": "Beginner",
     "hours": "12",
     "price": "",
-    "link" : "https://juniorpandit.com/"
+    "link" : "#"
 },
 
 {
@@ -77,7 +78,7 @@ let courses = [{
     "difficulty": "Beginner",
     "hours": "10",
     "price": "",
-    "link" : "https://juniorpandit.com/"
+    "link" : "#"
 }
 ]
 
@@ -86,7 +87,7 @@ let string = ""
 courses.forEach(item => 
 {
     string += `
-    <a class="card" href="${item.link}">
+    <a class="card" href="${item.link}" onClick="lol('${item.name}')">
         <h3 class="courseName">${item.name}</h3>
         <p class="hours">${item.hours} hours</p>
         <div class="linearInfo">
@@ -97,4 +98,10 @@ courses.forEach(item =>
     `
 })
 
-document.getElementById("courses").innerHTML = string
+document.getElementById("courses").innerHTML += string
+
+function lol(asd)
+{
+    url = "./contact.html?name=" + encodeURIComponent(asd)
+    document.location.href = url
+}
