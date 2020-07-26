@@ -67,7 +67,7 @@
             }
             // document.getElementById('here').innerHTML = data.name;
             courseInput = document.getElementById('courseVal')
-            courseInput.value=data.name.replaceAll('%20', ' ')
+            courseInput.value=data.name.replace(/%20/g, ' ')
             courseInput.setAttribute('disabled', true)
 
         }
