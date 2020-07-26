@@ -87,7 +87,7 @@ let string = ""
 courses.forEach(item => 
 {
     string += `
-    <a class="card" href="${item.link}" onClick="lol('${item.name}')">
+    <a class="card" href="${item.link}" onClick="fillForm('${item.name}')">
         <h3 class="courseName">${item.name}</h3>
         <p class="hours">${item.hours} hours</p>
         <div class="linearInfo">
@@ -100,7 +100,7 @@ courses.forEach(item =>
 
 document.getElementById("courses").innerHTML += string
 
-function lol(asd)
+function fillForm(asd)
 {
     url = "./contact.html?name=" + encodeURIComponent(asd)
     document.location.href = url

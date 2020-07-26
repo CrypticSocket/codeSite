@@ -339,6 +339,7 @@ nav{
         line-height: 1.5em;
         text-align: justify;
         word-spacing: -2px;
+        margin: auto;
     }
 
     .reviewer{
@@ -348,9 +349,9 @@ nav{
         opacity: 0.8;
     }
 
-    .eighty{
-        width: 80%;
-        margin: auto;
+    .testiRow {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .contactbtn{
@@ -371,6 +372,12 @@ nav{
     .center{
         text-align: center;
     }
+
+    .eighty{
+        width: 80%;
+        margin: auto;
+    }
+
 @media screen and (max-width:768px)
 {
     body{
